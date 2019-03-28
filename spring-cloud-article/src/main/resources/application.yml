@@ -1,0 +1,21 @@
+server:
+  port: 8764
+spring:
+  application:
+    # 指定服务名称
+    name: microservice-provider-article
+  datasource:
+        url: jdbc:mysql://localhsot:3306/spring-cloud?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=UTC
+        username: root
+        password: bruce1008
+        filters: log4j,wall,mergeStat
+eureka:
+  client:
+    healthcheck:           #开启健康检查
+      enabled: true
+    serviceUrl:
+      # 指定eureka server地址
+      defaultZone: http://localhost:8762/eureka/
+  instance:
+    # 指定是否注册IP到eureka server
+    prefer-ip-address: true
