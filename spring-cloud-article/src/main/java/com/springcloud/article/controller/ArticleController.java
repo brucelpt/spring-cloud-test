@@ -16,6 +16,9 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class ArticleController {
 
+    /**
+     * 暂时就写了一个首页模块，没有访问别的模块的需求，就不开ribbon的负载均衡了
+     */
     @Autowired
     private RestTemplate restTemplate;
 
