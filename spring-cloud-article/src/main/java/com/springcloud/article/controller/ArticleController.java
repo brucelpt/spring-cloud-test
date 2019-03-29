@@ -25,6 +25,7 @@ public class ArticleController {
     @HystrixCommand()
     @GetMapping("/shares/q")
     public JSONObject findById(Integer pageNo,String title) {
+//        return	this.restTemplate.getForObject("http://想调⽤的服务在eureka	server上的名 称/"	+	id,	User.class);
         JSONObject json = new JSONObject();
         json.put("status",200);
         json.put("msg","成功");
